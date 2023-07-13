@@ -6,10 +6,10 @@
         public string Ad { get; set; }
         public OzelKodTuru KodTuru { get; set; }
         public KartTuru KartTuru { get; set; }
-        public Guid? OzelKod1Id { get; set; }
-        public Guid? OzelKod2Id { get; set; }
         public string Aciklama { get; set; }
         public bool Durum { get; set; }
+
+
         public ICollection<BankaHesap> OzelKod1BankaHesaplar { get; set; }
         public ICollection<BankaHesap>OzelKod2BankaHesaplar { get; set; }
         public ICollection<Banka>OzelKod1Bankalar { get; set; }

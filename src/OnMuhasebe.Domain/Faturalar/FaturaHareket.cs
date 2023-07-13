@@ -3,7 +3,7 @@
     public class FaturaHareket:FullAuditedEntity<Guid>
     {
         public Guid FaturaId { get; set; }
-        public FaturaHareketTuru FaturaHareketTuru { get; set; }
+        public FaturaHareketTuru HareketTuru { get; set; }
         public Guid? StokId { get; set; }
         public Guid? HizmetId { get; set; }
         public Guid? MasrafId { get; set; }
@@ -22,6 +22,7 @@
         public Hizmet Hizmet { get; set; }
         public Masraf Masraf { get; set; }
         public Depo Depo { get; set; }
+        public Fatura Fatura { get; set; }
 
 
 

@@ -25,7 +25,8 @@ namespace OnMuhasebe.Faturalar
         public OzelKod OzelKod2 { get; set; }
         public Sube Sube { get; set; }
         public Donem Donem { get; set; }
-
+        
+        public ICollection<FaturaHareket>FaturaHareketler { get; set; }
 
 
     }

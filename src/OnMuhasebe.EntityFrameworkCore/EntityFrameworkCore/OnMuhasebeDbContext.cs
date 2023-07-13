@@ -4,6 +4,8 @@ using OnMuhasebe.Bankalar;
 using OnMuhasebe.BankaSubeler;
 using OnMuhasebe.Birimler;
 using OnMuhasebe.Cariler;
+using OnMuhasebe.Configuration;
+using OnMuhasebe.Const;
 using OnMuhasebe.Depolar;
 using OnMuhasebe.Donemler;
 using OnMuhasebe.Faturalar;
@@ -15,11 +17,13 @@ using OnMuhasebe.OzelKodlar;
 using OnMuhasebe.Parametreler;
 using OnMuhasebe.Stoklar;
 using OnMuhasebe.Subeler;
+using System.Data;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.EntityFrameworkCore;
@@ -112,11 +116,24 @@ public class OnMuhasebeDbContext :
 
         /* Configure your own tables/entities inside here */
 
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(OnMuhasebeConsts.DbTablePrefix + "YourEntities", OnMuhasebeConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+        builder.ConfigureBanka();
+        builder.ConfigureBankaSube();
+        builder.ConfigureBankaHesap();
+        builder.ConfigureBirim();
+        builder.ConfigureCari();
+        builder.ConfigureDepo();
+        builder.ConfigureDonem();
+        builder.ConfigureFatura();
+        builder.ConfigureFaturaHareket();
+        builder.ConfigureFirmaParametre();
+        builder.ConfigureHizmet();
+        builder.ConfigureKasa();
+        builder.ConfigureMakbuz();
+        builder.ConfigureMakbuzHareket();
+        builder.ConfigureMasraf();
+        builder.ConfigureOzelKod();
+        builder.ConfigureStok();
+        builder.ConfigureSube();
+
     }
 }

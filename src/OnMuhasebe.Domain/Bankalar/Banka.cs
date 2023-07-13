@@ -9,6 +9,8 @@
         public string Aciklama { get; set; }
         public bool Durum { get; set; }
 
+
+
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
 
